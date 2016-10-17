@@ -1,4 +1,4 @@
-$(document).ready ->
+@navLoader = () ->
 	sec1height = $('section.love-header').height();
 	sec2height = $('section#our-passion').height();
 	sec3height = $('section#our-services').height();

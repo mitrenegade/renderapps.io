@@ -14,6 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require love_header
-//= require nav
+//= require main
 //= require_tree .

@@ -1,4 +1,4 @@
-$(document).ready ->
+@loveLoader = () ->
   if $('.love-header .right-half')
   	$.each $('.love-header .right-half').find('h1'), (index, heading) ->
   		unless index >= ($('.love-header .right-half').find('h1').length - 2)
