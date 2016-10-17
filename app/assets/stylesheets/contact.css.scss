@@ -1,0 +1,29 @@
+$primary-blue: #086788;
+$secondary-blue: #07A0C3;
+$white: #FFFDF9;
+
+section#contact-section {
+	background-color: $primary-blue;
+	color: $white;
+	margin: 0;
+	height: 100vh;
+
+	.contact-container {
+		height: 100%;
+
+		.left-half {
+			h1 {
+				margin-top: 70px;
+				margin-left: 70px;
+			}
+		}
+
+		.right-half {
+			background-color: $secondary-blue;
+			padding: 70px;
+
+			h2 {
+			}
+		}
+	}
+}

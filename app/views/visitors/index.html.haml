@@ -1,0 +1,126 @@
+%section.love-header
+	.passion-container
+		.row.full-height
+			.col-md-6.full-height.left-half
+				%h1 
+					%br
+					We love
+			.col-md-6.full-height.right-half
+				%h1
+					&nbsp;
+				%h1.highlighted passionate people
+				%h1 the journey
+				%h1 new technology
+				%h1 code
+				%h1 all users
+
+%section#our-passion
+	%h1.section-title Our Passion
+	.container
+		.row
+			.col-md-6
+				%h3
+					We believe that passion pushes the world forward.
+				.passion-img-container= image_tag 'render_passion_3.jpeg', class: 'img-fluid passion-image'
+			.col-md-6
+				%p.lead
+					We’re a group of people who absolutely love what we do. We pride ourselves on what we’ve accomplished, and thrive off each other’s motivation.
+				%br
+				%p.lead
+					When you work with us, we bring our passion and expertise to meet yours. 
+					= link_to 'See how.', root_path
+
+%section#our-services
+	%h1.section-title-with-subtitle
+		Our Services
+	%p.lead
+		Our team offers the full spectrum of user-focused design, agile development, and focused strategy for each specialty. 
+	.container
+		.row
+			.col-md-3
+				.flip
+					.card-flippable
+						.face.front
+							.well.well-sm.inner
+								= image_tag 'icon_ios.png', class: 'img-fluid'
+								.card-title.centered
+									iOS
+						.face.back
+							.well.well-sm.inner
+								We’ve developed and shipped custom applications for clients ranging from small startups to large-scale enterprises. The sky is the limit.
+			.col-md-3
+				.flip
+					.card-flippable
+						.face.front
+							.well.well-sm.inner
+								= image_tag 'icon_vr.png', class: 'img-fluid'
+								.card-title.centered
+									Virtual Reality
+						.face.back
+							.well.well-sm.inner
+								One of our favorite cutting edge technologies - we can help develop intuitive interfaces and seemlessly structure your backend.
+			.col-md-3
+				.flip
+					.card-flippable
+						.face.front
+							.well.well-sm.inner
+								= image_tag 'icon_prototyping.png', class: 'img-fluid'
+								.card-title.centered
+									Prototyping
+						.face.back
+							.well.well-sm.inner
+								Between the members of our team, we’ve built hundreds of prototypes and MVPs for projects large and small. We know how to build a product, and will help shape your idea into an action plan.
+			.col-md-3
+				.flip
+					.card-flippable
+						.face.front
+							.well.well-sm.inner
+								= image_tag 'icon_web.png', class: 'img-fluid'
+								.card-title.centered
+									Web Development
+						.face.back
+							.well.well-sm.inner
+								Best of class web design and development. We’ve shipped products in every framework, and can help you build the stack that best suits your needs.
+
+%section#why-renderapps
+	.why-renderapps-container
+		.row.full-height
+			.col-md-1
+			.col-md-5.full-height.left-half
+				%h1.section-title Why RenderApps
+				.row.value-prop-row
+					.col-xs-2
+						= image_tag 'icon_running.png', class: 'img-fluid'
+					.col-xs-10
+						%p
+							%span.bold
+								We jump in and hit the ground running
+							%br
+							Once we’ve decided on a partnership, we’ll be just as excited as you are to make something magical. 
+				.row.value-prop-row
+					.col-xs-2
+						= image_tag 'icon_ship.png', class: 'img-fluid'
+					.col-xs-10
+						%p
+							%span.bold
+								We know how to steer you in the right direction
+							%br
+							From small startups to large corporations, we’ve helped so many companies ship amazing products. We’ve done this before, learning many lessons along the way.
+				.row.value-prop-row
+					.col-xs-2
+						= image_tag 'icon_integrity.png', class: 'img-fluid'
+					.col-xs-10
+						%p
+							%span.bold
+								We stand by our integrity
+							%br
+							Trusting someone to help you build your dream can be intimidating. Have a chat with us, our values speak for themselves.
+				.centered
+					= link_to "LET'S TALK", contact_path, class: 'btn btn-primary'
+			.col-md-6.right-half.full-height
+				%p.lead
+					"We feel that we have found natural partners who will continue to be a part of the Bond Voyage building process.
+					%br
+					%br
+					Overall, RenderApps has proven to be an excellent choice to help us build our first app and we hope to continue working with them in the future as we grow and expand.”
+

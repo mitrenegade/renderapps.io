@@ -1,10 +1,12 @@
--# navigation styled for Bootstrap 3.0
 .container
-  %nav.navbar.navbar-dark.bg-inverse
-    %ul.nav.navbar-nav.clearfix
-      %li.nav-item
-        %button.navbar-toggler.hidden-sm-up.nav-link{"aria-controls" => "exCollapsingNavbar2", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#exCollapsingNavbar2", "data-toggle" => "collapse", :type => "button"}
-          \ &#9776;
-    #exCollapsingNavbar2.collapse.navbar-toggleable-xs
-      = link_to "Rails bootstrap", root_path, class: 'navbar-brand'
-      %ul.nav.navbar-nav= render 'layouts/navigation_links'
+  %a.navbar-brand{href: "#", style: 'padding: .425rem 0'} RenderApps
+  %ul.nav.navbar-nav
+    %li.nav-item.active#nav-passion
+      = link_to 'Our Passion', '#passion', class: 'nav-link'
+    %li.nav-item#nav-services
+      = link_to 'Our Services', '#services', class: 'nav-link'
+    %li.nav-item#nav-why
+      = link_to 'Why RenderApps', '#why-us', class: 'nav-link'
+  %ul.nav.navbar-nav.navbar-right{style: 'display:none'}
+    = render 'layouts/navigation_links_right'
+  / /.nav-collapse

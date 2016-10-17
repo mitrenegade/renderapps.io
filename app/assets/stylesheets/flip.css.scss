@@ -1,0 +1,46 @@
+.flip {
+	-webkit-perspective: 800;
+	perspective: 800;
+	position: relative;
+	text-align: center;
+}
+
+.flip .card-flippable.flipped {
+	-webkit-transform: rotatey(-180deg);
+	transform: rotatey(-180deg);
+}
+
+.flip .card-flippable {
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: 0.5s;
+	transform-style: preserve-3d;
+	transition: 0.5s;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	border-radius: .25rem;
+}
+
+.flip .card-flippable .face {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	z-index: 2; 
+}
+
+.flip .card-flippable .front {
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+
+}
+.flip .card-flippable .back {
+	-webkit-transform: rotatey(-180deg);
+	transform: rotatey(-180deg);
+	background-color: #95A3B3;
+	color: white;
+	height: 100%;
+	text-align: left;
+}
+
+.inner{
+	margin:0px !important;
+}
