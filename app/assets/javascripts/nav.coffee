@@ -1,5 +1,5 @@
 @navLoader = () ->
-	sec1height = $('section.love-header').height();
+	sec1height = $('section#love-header').height();
 	sec2height = $('section#our-passion').height();
 	sec3height = $('section#our-services').height();
 	sec4height = $('section#why-renderapps').height();

@@ -65,11 +65,15 @@ $white: #FFFDF9;
 	opacity: 0;
 }
 
-section.love-header {
+section#love-header {
 	background-color: $primary-blue;
 	color: $white;
 	margin: 0;
 	height: 100vh;
+
+	.passion-container-xs {
+		display: none;
+	}
 
 	.passion-container {
 		height: 100%;
@@ -143,6 +147,7 @@ section#our-services {
 section#our-passion {
 	.passion-img-container {
 		margin-top: 40px;
+		margin-bottom: 20px;
 		position: relative;
 		left: -15px;
 
@@ -190,5 +195,60 @@ section#why-renderapps {
 
 	.value-prop-row {
 		margin-bottom: 40px;
+	}
+}
+
+@media all and (max-width:768px) {
+	section#love-header {
+		height: inherit;
+		min-height: 100vh;
+		padding: 80px 20px;
+
+		span.lighter-blue {
+			color: $secondary-blue;
+		}
+
+		.passion-container {
+			display: none;
+		}
+
+		.passion-container-xs {
+			display: block;
+		}
+	}
+
+	section#our-passion {
+		.passion-img-container {
+			left: 0;
+		}
+	}
+
+	section#our-services {
+		padding-left: 40px;
+		padding-right: 40px;
+
+		.card-flippable {
+			max-width: 400px;
+			margin: 20px auto;
+		}
+	}
+
+	section#why-renderapps {
+		min-height: 100vh;
+		height: 100%;
+
+		.why-renderapps-container {
+			height: initial;
+
+			.row {
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+			.left-half,
+			.right-half {
+				height: initial;
+			}
+		}
 	}
 }
