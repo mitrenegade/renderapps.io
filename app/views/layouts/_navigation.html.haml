@@ -1,12 +1,12 @@
 .container
-  %a.navbar-brand{href: "#", style: 'padding: .425rem 0'} RenderApps
+  = link_to 'RenderApps', root_path, class: 'navbar-brand', style: 'padding: .425rem 0; color: white;'
   %ul.nav.navbar-nav
     %li.nav-item.active#nav-passion
-      = link_to 'Our Passion', '#passion', class: 'nav-link'
+      = link_to 'Our Passion', '#passion', class: 'nav-link fake-nav'
     %li.nav-item#nav-services
-      = link_to 'Our Services', '#services', class: 'nav-link'
+      = link_to 'Our Services', '#services', class: 'nav-link fake-nav'
     %li.nav-item#nav-why
-      = link_to 'Why RenderApps', '#why-us', class: 'nav-link'
+      = link_to 'Why RenderApps', '#why-us', class: 'nav-link fake-nav'
   %ul.nav.navbar-nav.navbar-right{style: 'display:none'}
     = render 'layouts/navigation_links_right'
   / /.nav-collapse

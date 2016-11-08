@@ -1,3 +1,4 @@
+%a.anchor#home
 %section#love-header
 	.passion-container-xs
 		%h1.centered
@@ -20,74 +21,95 @@
 				%h1 code
 				%h1 all users
 
-%section#our-passion
-	%h1.section-title Our Passion
-	.container
-		.row
-			.col-md-6
-				%h3
-					We believe that passion pushes the world forward.
-				.passion-img-container= image_tag 'render_passion_3.png', class: 'img-fluid passion-image'
-			.col-md-6
-				%p.lead
-					We’re a group of people who absolutely love what we do. We pride ourselves on what we’ve accomplished, and thrive off each other’s motivation.
-				%br
-				%p.lead
-					When you work with us, we bring our passion and expertise to meet yours. 
-					= link_to 'See how.', root_path
+.first-body
+	%a.anchor#passion
+	%section#our-passion
+		%h1.section-title Our Passion
+		.container
+			.row
+				.col-md-6
+					%h3
+						We believe that passion pushes the world forward.
+					.passion-img-container= image_tag 'render_passion_3.png', class: 'img-fluid passion-image'
+				.col-md-6
+					%p.lead
+						We’re a group of people who absolutely love what we do. We pride ourselves on what we’ve accomplished, and thrive off each other’s motivation.
+					%br
+					%p.lead
+						When you work with us, we bring our passion and expertise to meet yours. 
+						= link_to 'See how.', root_path
 
-%section#our-services
-	%h1.section-title-with-subtitle
-		Our Services
-	%p.lead
-		Our team offers the full spectrum of user-focused design, agile development, and focused strategy for each specialty. 
-	.container
-		.row
-			.col-md-3
-				.flip
-					.card-flippable
-						.face.front
-							.well.well-sm.inner
-								= image_tag 'icon_ios.png', class: 'img-fluid'
-								.card-title.centered
-									iOS
-						.face.back
-							.well.well-sm.inner
-								We’ve developed and shipped custom applications for clients ranging from small startups to large-scale enterprises. The sky is the limit.
-			.col-md-3
-				.flip
-					.card-flippable
-						.face.front
-							.well.well-sm.inner
-								= image_tag 'icon_vr.png', class: 'img-fluid'
-								.card-title.centered
-									Virtual Reality
-						.face.back
-							.well.well-sm.inner
-								One of our favorite cutting edge technologies - we can help develop intuitive interfaces and seemlessly structure your backend.
-			.col-md-3
-				.flip
-					.card-flippable
-						.face.front
-							.well.well-sm.inner
-								= image_tag 'icon_prototyping.png', class: 'img-fluid'
-								.card-title.centered
-									Prototyping
-						.face.back
-							.well.well-sm.inner
-								Between the members of our team, we’ve built hundreds of prototypes and MVPs for projects large and small. We know how to build a product, and will help shape your idea into an action plan.
-			.col-md-3
-				.flip
-					.card-flippable
-						.face.front
-							.well.well-sm.inner
-								= image_tag 'icon_web.png', class: 'img-fluid'
-								.card-title.centered
-									Web Development
-						.face.back
-							.well.well-sm.inner
-								Best of class web design and development. We’ve shipped products in every framework, and can help you build the stack that best suits your needs.
+	%div{style: 'background: transparent; height: 400px;'}
 
+.second-body
+	%a.anchor#services
+	%section#our-services
+		%h1.section-title-with-subtitle
+			Our Services
+		%p.lead
+			Our team offers the full spectrum of user-focused design, agile development, and focused strategy for each specialty. 
+		.container
+			.row
+				.col-md-3
+					.flip
+						.card-flippable
+							.face.front
+								.well.well-sm.inner
+									= image_tag 'icon_ios.png', class: 'img-fluid'
+									.card-title.centered
+										iOS
+							.face.back
+								.well.well-sm.inner
+									We’ve developed and shipped custom applications for clients ranging from small startups to large-scale enterprises. The sky is the limit.
+				.col-md-3
+					.flip
+						.card-flippable
+							.face.front
+								.well.well-sm.inner
+									= image_tag 'icon_vr.png', class: 'img-fluid'
+									.card-title.centered
+										Virtual Reality
+							.face.back
+								.well.well-sm.inner
+									One of our favorite cutting edge technologies - we can help develop intuitive interfaces and seemlessly structure your backend.
+				.col-md-3
+					.flip
+						.card-flippable
+							.face.front
+								.well.well-sm.inner
+									= image_tag 'icon_prototyping.png', class: 'img-fluid'
+									.card-title.centered
+										Prototyping
+							.face.back
+								.well.well-sm.inner
+									Between the members of our team, we’ve built dozens of prototypes and MVPs for projects large and small. We know how to build a product, and will help shape your idea into an action plan.
+				.col-md-3
+					.flip
+						.card-flippable
+							.face.front
+								.well.well-sm.inner
+									= image_tag 'icon_web.png', class: 'img-fluid'
+									.card-title.centered
+										Web Development
+							.face.back
+								.well.well-sm.inner
+									Best of class web design and development. We’ve shipped products in every framework, and can help you build the stack that best suits your needs.
+		%hr{ style: 'margin: 100px 50px'}
+		.container
+			%h2.centered Technology Stacks
+			%br
+			- technologies = ['Objective C', 'Ruby', 'Ruby on Rails', 'Python',  'AngularJS', 'MySQL', 'PostgreSQL', 'Wordpress', 'Bootstrap', 'Less', 'Sass', 'D3', 'jQuery', 'Javascript', 'Version Control', 'CSS3', 'HTML5', 'Nginx', ]
+			- icons = ['objectivec', 'ruby', 'rails', 'python', 'angular', 'mysql', 'postgres', 'wordpress', 'bootstrap', 'less', 'sass', 'd3', 'jquery', 'js', 'github-circle', 'css3', 'html5', 'nginx']
+			.row
+				- icons.each_with_index do |icon, index|
+					.col-xs-2.col-xs-1
+						%span.technology-icon{class: "icon-#{icon}"}
+						%p.centered= technologies[index]
+						%br
+
+	%div{style: 'background: transparent; height: 400px;'}
+
+%a.anchor#why-us
 %section#why-renderapps
 	.why-renderapps-container
 		.row.full-height

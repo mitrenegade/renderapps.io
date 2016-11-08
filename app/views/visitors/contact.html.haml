@@ -1,9 +1,9 @@
 %section#contact-section
 	.contact-container
 		.row.full-height
-			.col-md-6.full-height.left-half
+			.col-md-5.full-height.left-half
 				%h1 Let's Talk
-			.col-md-6.full-height.right-half
+			.col-md-7.full-height.right-half
 				%h2 If you think this could be a partnership made in heaven, please reach out!
 				= form_for @lead, url: {controller: 'leads', action: 'create'}, html: {class: ''} do |f|
 					.form-control-label

@@ -7,7 +7,7 @@
 @loaders = () ->
   mainLoader()
   loveLoader()
-  navLoader()
+  navLoader() unless $('body').hasClass('static-body')
 
 $(document).ready(loaders)
 $(document)

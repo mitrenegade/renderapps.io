@@ -2,6 +2,24 @@ $primary-blue: #086788;
 $secondary-blue: #07A0C3;
 $white: #FFFDF9;
 
+.first-body {
+	background-image: asset-url('man_sitting.jpg');
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.second-body {
+	background-image: asset-url('idea_work.jpg');
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+section {
+	background-color: white;
+}
+
 .navbar {
 	background-color: $primary-blue !important;
 	color: $white !important;
@@ -62,7 +80,7 @@ $white: #FFFDF9;
 }
 
 .hidden {
-	opacity: 0;
+	display: none;
 }
 
 section#love-header {
@@ -138,6 +156,10 @@ section#love-header {
 	}
 }
 
+section {
+	margin-top: 0;
+}
+
 section#our-passion,
 section#our-services {
 	padding-top: 80px;
@@ -198,6 +220,12 @@ section#why-renderapps {
 	}
 }
 
+// TODO: add appropriate containers to remove this
+section, .row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 @media all and (max-width:768px) {
 	section#love-header {
 		height: inherit;
@@ -251,4 +279,13 @@ section#why-renderapps {
 			}
 		}
 	}
+}
+
+
+
+.footer {
+	background-color: #222;
+	color: $white;
+	padding: 20px 40px;
+	font-weight: 300;
 }

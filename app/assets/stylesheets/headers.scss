@@ -1,0 +1,31 @@
+.static-header {
+	padding: 200px;
+	text-align: center;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin-bottom: 100px;
+
+	h1 {
+		font-size: 50px;
+	}
+}
+
+.careers-header {
+	background-image: asset-url('man_sitting.jpg');
+	color: white;
+}
+
+.team-header {
+	background-image: asset-url('man_sitting.jpg');
+	color: white;
+}
+
+.about-header {
+	background-image: asset-url('man_sitting.jpg');
+	color: white;
+}
+
+.large-margin-hr {
+	margin: 50px 0;
+}
