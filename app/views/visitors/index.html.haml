@@ -37,20 +37,20 @@
 					%br
 					%p.lead
 						When you work with us, we bring our passion and expertise to meet yours. 
-						= link_to 'See how.', root_path
+						-# link_to 'See how.', root_path
 
 	%div{style: 'background: transparent; height: 400px;'}
 
 .second-body
 	%a.anchor#services
 	%section#our-services
-		%h1.section-title-with-subtitle
-			Our Services
-		%p.lead
-			Our team offers the full spectrum of user-focused design, agile development, and focused strategy for each specialty. 
 		.container
+			%h1.section-title-with-subtitle
+				Our Services
+			%p.lead
+				Our team offers the full spectrum of user-focused design, agile development, and focused strategy for each specialty. 
 			.row
-				.col-md-3
+				.col-lg-3.col-sm-6
 					.flip
 						.card-flippable
 							.face.front
@@ -61,7 +61,7 @@
 							.face.back
 								.well.well-sm.inner
 									We’ve developed and shipped custom applications for clients ranging from small startups to large-scale enterprises. The sky is the limit.
-				.col-md-3
+				.col-lg-3.col-sm-6
 					.flip
 						.card-flippable
 							.face.front
@@ -72,7 +72,7 @@
 							.face.back
 								.well.well-sm.inner
 									One of our favorite cutting edge technologies - we can help develop intuitive interfaces and seemlessly structure your backend.
-				.col-md-3
+				.col-lg-3.col-sm-6
 					.flip
 						.card-flippable
 							.face.front
@@ -83,7 +83,7 @@
 							.face.back
 								.well.well-sm.inner
 									Between the members of our team, we’ve built dozens of prototypes and MVPs for projects large and small. We know how to build a product, and will help shape your idea into an action plan.
-				.col-md-3
+				.col-lg-3.col-sm-6
 					.flip
 						.card-flippable
 							.face.front
@@ -96,25 +96,24 @@
 									Best of class web design and development. We’ve shipped products in every framework, and can help you build the stack that best suits your needs.
 		%hr{ style: 'margin: 100px 50px'}
 		.container
-			%h2.centered Technology Stacks
+			%h2.centered Technologies
 			%br
-			- technologies = ['Objective C', 'Ruby', 'Ruby on Rails', 'Python',  'AngularJS', 'MySQL', 'PostgreSQL', 'Wordpress', 'Bootstrap', 'Less', 'Sass', 'D3', 'jQuery', 'Javascript', 'Version Control', 'CSS3', 'HTML5', 'Nginx', ]
+			- technologies = ['Objective C', 'Ruby', 'Rails', 'Python',  'AngularJS', 'MySQL', 'PostgreSQL', 'Wordpress', 'Bootstrap', 'Less', 'Sass', 'D3', 'jQuery', 'Javascript', 'Git', 'CSS3', 'HTML5', 'Nginx', ]
 			- icons = ['objectivec', 'ruby', 'rails', 'python', 'angular', 'mysql', 'postgres', 'wordpress', 'bootstrap', 'less', 'sass', 'd3', 'jquery', 'js', 'github-circle', 'css3', 'html5', 'nginx']
 			.row
 				- icons.each_with_index do |icon, index|
-					.col-xs-2.col-xs-1
+					.col-md-2.col-xs-3
 						%span.technology-icon{class: "icon-#{icon}"}
 						%p.centered= technologies[index]
-						%br
 
 	%div{style: 'background: transparent; height: 400px;'}
 
 %a.anchor#why-us
 %section#why-renderapps
 	.why-renderapps-container
-		.row.full-height
+		.row.full-height{ style: 'overflow: hidden' }
 			.col-md-1
-			.col-sm-10.offset-sm-1.offset-md-0.col-md-5.full-height.left-half
+			.col-sm-10.offset-sm-1.offset-md-0.col-md-5.full-height.left-half{ style: 'margin-bottom: -99999px; padding-bottom: 99999px;'}
 				%h1.section-title Why RenderApps
 				.row.value-prop-row
 					.col-xs-2
@@ -145,10 +144,15 @@
 							Trusting someone to help you build your dream can be intimidating. Have a chat with us, our values speak for themselves.
 				.centered
 					= link_to "LET'S TALK", contact_path, class: 'btn btn-primary'
-			.col-sm-12.col-md-6.right-half.full-height
-				%p.lead
-					"We feel that we have found natural partners who will continue to be a part of the Bond Voyage building process.
-					%br
-					%br
-					Overall, RenderApps has proven to be an excellent choice to help us build our first app and we hope to continue working with them in the future as we grow and expand.”
+			.col-sm-12.col-md-6.right-half.full-height{ style: 'margin-bottom: -99999px; padding-bottom: 99999px;'}
+				.testimonial-wrapper
+					%p.lead
+						"We feel that we have found natural partners who will continue to be a part of the Bond Voyage building process.
+						%br
+						%br
+						Overall, RenderApps has proven to be an excellent choice to help us build our first app and we hope to continue working with them in the future as we grow and expand.”
+					%p.pull-right
+						Penelope and Zoi
+						%br
+						Founders, Bond Voyage
 

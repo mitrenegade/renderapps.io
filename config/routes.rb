@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 	get '/team', to: 'visitors#team'
 	get '/careers', to: 'visitors#careers'
 	get '/about-us', to: 'visitors#about', as: 'about'
-	get '/blog', to: 'visitors#blog'
+	# get '/blog', to: 'visitors#blog'
 	
   root to: 'visitors#index'
 end

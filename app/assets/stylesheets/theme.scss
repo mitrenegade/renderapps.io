@@ -196,7 +196,6 @@ section#our-services {
 }
 
 section#why-renderapps {
-	height: 100vh;
 	border-top: 1px solid #ddd;
 
 	.why-renderapps-container {
@@ -212,11 +211,30 @@ section#why-renderapps {
 			background-color: $secondary-blue;
 			color: white;
 			padding: 100px 40px;
+
+			.testimonial-wrapper {
+				margin-bottom: 100px;
+
+				.pull-right {
+					float: right;
+					position: absolute;
+
+					&:after {
+						content: "\2014";
+						left: -20px;
+						top: 0px;
+					}
+				}
+			}
 		}
 	}
 
 	.value-prop-row {
 		margin-bottom: 40px;
+	}
+
+	.btn {
+		margin-bottom: 60px;
 	}
 }
 

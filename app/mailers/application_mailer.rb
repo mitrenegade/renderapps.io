@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'noreply@renderapps.io'
+  default from: 'info@renderapps.io'
   layout 'mailer'
 end

@@ -1,6 +1,7 @@
 .team-img {
-	$team-size: 100px;
+	$team-size: 200px;
 	height: $team-size;
 	width: $team-size;
-	border-radius: $team-size/2;
+	border-radius: $team-size/10;
+	margin-bottom: 30px;
 }
