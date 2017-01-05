@@ -217,9 +217,10 @@ section#why-renderapps {
 
 				.pull-right {
 					float: right;
-					position: absolute;
+					position: relative;
 
 					&:after {
+						position: absolute;
 						content: "\2014";
 						left: -20px;
 						top: 0px;
