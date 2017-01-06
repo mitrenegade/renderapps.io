@@ -6,7 +6,7 @@ section#contact-section {
 	background-color: $primary-blue;
 	color: $white;
 	margin: 0;
-	height: 100vh;
+	min-height: 100vh;
 
 	.contact-container {
 		height: 100%;
@@ -24,6 +24,21 @@ section#contact-section {
 			padding: 70px;
 
 			h2 {
+			}
+		}
+	}
+}
+
+@media all and (max-width:767px) {
+	section#contact-section {
+
+		.contact-container {
+			.left-half {
+				display: none;
+			}
+
+			.right-half {
+				padding: 30px;
 			}
 		}
 	}

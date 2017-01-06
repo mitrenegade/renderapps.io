@@ -1,5 +1,6 @@
 .container
-  = link_to 'RenderApps', root_path, class: 'navbar-brand', style: 'padding: .425rem 0; color: white;'
+  = link_to root_path, class: 'navbar-brand', style: 'color: white;' do
+    = image_tag 'renderapps_logo2.png', style: 'height: 30px;'
   %ul.nav.navbar-nav
     %li.nav-item.active#nav-passion
       = link_to 'Our Passion', '#passion', class: 'nav-link fake-nav'

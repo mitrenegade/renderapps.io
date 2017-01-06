@@ -3,17 +3,19 @@ $secondary-blue: #07A0C3;
 $white: #FFFDF9;
 
 .first-body {
-	background-image: asset-url('man_sitting.jpg');
+	background-image: asset-url('heros/passion1.jpg');
 	background-position: center center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .second-body {
-	background-image: asset-url('idea_work.jpg');
+	background-image: asset-url('heros/dev1.jpg');
 	background-position: center center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 section {
@@ -245,7 +247,17 @@ section, .row {
 	margin-right: 0;
 }
 
+
+.footer {
+	background-color: #222;
+	color: $white;
+	padding: 20px 40px;
+	font-weight: 300;
+}
+
+
 @media all and (max-width:768px) {
+
 	section#love-header {
 		height: inherit;
 		min-height: 100vh;
@@ -300,11 +312,14 @@ section, .row {
 	}
 }
 
+@media all and (max-width:425px) {
+	.navbar-default {
+		.navbar-brand {
+			margin-top: -7px;
+		}
 
-
-.footer {
-	background-color: #222;
-	color: $white;
-	padding: 20px 40px;
-	font-weight: 300;
+		.navbar-nav {
+			font-size: 12px;
+		}
+	}
 }

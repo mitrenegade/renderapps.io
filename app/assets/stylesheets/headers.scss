@@ -1,5 +1,5 @@
 .static-header {
-	padding: 200px;
+	padding: 200px 0;
 	text-align: center;
 	background-position: center;
 	background-attachment: fixed;
@@ -12,17 +12,18 @@
 }
 
 .careers-header {
-	background-image: asset-url('man_sitting.jpg');
+	background-image: asset-url('heros/rendering5.png');
+	background-size: cover;
 	color: white;
 }
 
 .team-header {
-	background-image: asset-url('man_sitting.jpg');
+	background-image: asset-url('heros/rendering5.png');
 	color: white;
 }
 
 .about-header {
-	background-image: asset-url('man_sitting.jpg');
+	background-image: asset-url('heros/rendering5.png');
 	color: white;
 }
 
