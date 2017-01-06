@@ -33,7 +33,7 @@
 		return
 
 	$(document).scroll ->
-		if $('body').hasClass('static-body')
+		if $('body').hasClass('scroll-nav')
 			updateScrollPos();
 
 	switchNav = () ->
