@@ -33,7 +33,8 @@
 		return
 
 	$(document).scroll ->
-		updateScrollPos();
+		if $('body').hasClass('static-body')
+			updateScrollPos();
 
 	switchNav = () ->
 		$('.nav-item').removeClass('active');
@@ -45,7 +46,6 @@
 
 
 	updateScrollPos = () ->
-		# console.log($(document).scrollTop());
 		switch 
 			when $(document).scrollTop() >= (sec1height + sec2height + sec3height)
 				if currentSec != 4
