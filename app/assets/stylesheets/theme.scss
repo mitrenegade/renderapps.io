@@ -10,6 +10,11 @@ $white: #FFFDF9;
 	color: $white;
 }
 
+.transparent-scrolling-background {
+	background: transparent;
+	height: 400px;
+}
+
 .first-body {
 	background-image: asset-url('heros/passion1.jpg');
 	background-position: center center;
@@ -313,6 +318,20 @@ section, .row {
 				height: initial;
 			}
 		}
+	}
+}
+
+@media all and (max-width: 768px) {
+	.first-body,
+	.second-body {
+		background-attachment: scroll;
+		background-size: 100%;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+	}
+
+	.transparent-scrolling-background {
+		height: 300px;
 	}
 }
 
