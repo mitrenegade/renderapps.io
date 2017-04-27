@@ -1,0 +1,67 @@
+// Place all the styles related to the calculator controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.calculator-container {
+	min-height: 100vh;
+	margin-top: 50px;
+	padding: 100px 0;
+	background-color: #FFFDF9;
+	color: #464646;
+	text-align: center;
+
+	h1 {
+		margin-bottom: 60px;
+	}
+
+	.options-container {
+
+		.option-col {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		.option {
+			margin: auto;
+			user-select: none;
+		}
+
+		.option .option-display {
+			margin: auto;
+			width: 200px;
+			height: 200px;
+			border-radius: 23px;
+			box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+		.option .option-text {
+			margin-top: 10px;
+		}
+
+		.option:hover {
+			cursor: pointer;
+			.option-display {
+				background-color: #fcfcfc;
+			}
+		}
+
+		.option.active {
+			.option-display {
+				border: 3px solid #d6f3f8;
+			}
+			.option-text {
+				font-weight: 600;
+			}
+		}
+
+	}
+
+	.calculator-nav {
+		margin-top: 60px;
+	}
+}

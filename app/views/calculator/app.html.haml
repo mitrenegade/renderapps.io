@@ -1,0 +1,31 @@
+.calculator-container
+	.container
+		%h1 What kind of app are you looking to build?
+		= form_for @estimate, url: { controller: 'estimates', action: 'create' }, html: { class: 'estimate-form' } do |f|
+			.row.options-container
+				.col-sm-4.option-col
+					= f.check_box :app_web, class: 'hidden'
+					= f.label :app_web do
+						.option
+							.option-display
+								= image_tag 'calculator/app_web@2x'
+							%p.option-text
+								Web App
+				.col-sm-4.option-col
+					= f.check_box :app_mobile, class: 'hidden'
+					= f.label :app_mobile do
+						.option
+							.option-display
+								= image_tag 'calculator/app_mobile@2x'
+							%p.option-text
+								Mobile App
+				.col-sm-4.option-col
+					= f.check_box :app_vr, class: 'hidden'
+					= f.label :app_vr do
+						.option
+							.option-display
+								= image_tag 'calculator/app_vr@2x'
+							%p.option-text
+								Virtual Reality
+			.calculator-nav
+				= f.submit 'Continue', class: 'btn btn-primary'

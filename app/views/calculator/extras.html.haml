@@ -1,0 +1,32 @@
+.calculator-container
+	.container
+		%h1 Anything else?
+		= form_for @estimate, url: estimate_path(@estimate), method: 'patch', html: { class: 'estimate-form' } do |f|
+			= f.hidden_field :current_step, value: 'extras'
+			.row.options-container
+				.col-sm-4.option-col
+					= f.check_box :extra_website, class: 'hidden'
+					= f.label :extra_website do
+						.option
+							.option-display
+								= image_tag 'calculator/app_web@2x'
+							%p.option-text
+								Marketing Website
+				.col-sm-4.option-col
+					= f.check_box :extra_appicon, class: 'hidden'
+					= f.label :extra_appicon do
+						.option
+							.option-display
+								= image_tag 'calculator/extra_appicon@2x'
+							%p.option-text
+								App Icon
+				.col-sm-4.option-col
+					= f.check_box :extra_logo, class: 'hidden'
+					= f.label :extra_logo do
+						.option
+							.option-display
+								= image_tag 'calculator/extra_logo@2x'
+							%p.option-text
+								Logo
+			.calculator-nav
+				= f.submit 'Continue', class: 'btn btn-primary'

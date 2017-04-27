@@ -1,0 +1,63 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  phone: MyString
+  reg_email: false
+  reg_social: false
+  reg_none: false
+  app_web: false
+  app_mobile: false
+  app_vr: false
+  feat_onboarding: false
+  feat_admin: false
+  feat_autoemail: false
+  feat_rating: false
+  feat_social: false
+  feat_gamify: false
+  feat_photos: false
+  feat_payment: false
+  feat_messaging: false
+  feat_video: false
+  feat_gps: false
+  feat_places: false
+  feat_schedule: false
+  feat_notify: false
+  feat_health: false
+  api: false
+  api_unsure: false
+  extra_website: false
+  extra_appicon: false
+  extra_logo: false
+  timeline: 
+
+two:
+  email: MyString
+  phone: MyString
+  reg_email: false
+  reg_social: false
+  reg_none: false
+  app_web: false
+  app_mobile: false
+  app_vr: false
+  feat_onboarding: false
+  feat_admin: false
+  feat_autoemail: false
+  feat_rating: false
+  feat_social: false
+  feat_gamify: false
+  feat_photos: false
+  feat_payment: false
+  feat_messaging: false
+  feat_video: false
+  feat_gps: false
+  feat_places: false
+  feat_schedule: false
+  feat_notify: false
+  feat_health: false
+  api: false
+  api_unsure: false
+  extra_website: false
+  extra_appicon: false
+  extra_logo: false
+  timeline: 

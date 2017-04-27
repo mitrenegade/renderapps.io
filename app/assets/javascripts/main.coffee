@@ -8,6 +8,7 @@
   mainLoader()
   loveLoader()
   navLoader() unless $('body').hasClass('static-body')
+  calculatorLoader()
 
 $(document).ready(loaders)
 $(document)

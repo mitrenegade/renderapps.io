@@ -1,0 +1,32 @@
+.calculator-container
+	.container
+		%h1 How will users register?
+		= form_for @estimate, url: estimate_path(@estimate), method: 'patch', html: { class: 'estimate-form' } do |f|
+			= f.hidden_field :current_step, value: 'users'
+			.row.options-container
+				.col-sm-4.option-col
+					= f.check_box :reg_email, class: 'hidden'
+					= f.label :reg_email do
+						.option
+							.option-display
+								= image_tag 'calculator/signup_email@2x'
+							%p.option-text
+								Email Signup
+				.col-sm-4.option-col
+					= f.check_box :reg_social, class: 'hidden'
+					= f.label :reg_social do
+						.option
+							.option-display
+								= image_tag 'calculator/signup_social@2x'
+							%p.option-text
+								Social Login
+				.col-sm-4.option-col
+					= f.check_box :reg_none, class: 'hidden'
+					= f.label :reg_none do
+						.option
+							.option-display
+								= image_tag 'calculator/signup_none@2x'
+							%p.option-text
+								No Authentication
+			.calculator-nav
+				= f.submit 'Continue', class: 'btn btn-primary'

@@ -1,0 +1,128 @@
+.calculator-container
+	.container
+		%h1 What key features do you want?
+		= form_for @estimate, url: estimate_path(@estimate), method: 'patch', html: { class: 'estimate-form' } do |f|
+			= f.hidden_field :current_step, value: 'features'
+			.row.options-container
+				.col-sm-4.option-col
+					= f.check_box :feat_onboarding, class: 'hidden'
+					= f.label :feat_onboarding do
+						.option
+							.option-display
+								= image_tag 'calculator/features_onboarding@2x'
+							%p.option-text
+								User Onboarding
+				.col-sm-4.option-col
+					= f.check_box :feat_admin, class: 'hidden'
+					= f.label :feat_admin do
+						.option
+							.option-display
+								= image_tag 'calculator/features_admin@2x'
+							%p.option-text
+								Admin Dashboard
+				.col-sm-4.option-col
+					= f.check_box :feat_autoemail, class: 'hidden'
+					= f.label :feat_autoemail do
+						.option
+							.option-display
+								= image_tag 'calculator/features_email@2x'
+							%p.option-text
+								Email Automation
+				.col-sm-4.option-col
+					= f.check_box :feat_rating, class: 'hidden'
+					= f.label :feat_rating do
+						.option
+							.option-display
+								= image_tag 'calculator/features_rating@2x'
+							%p.option-text
+								Rating System
+				.col-sm-4.option-col
+					= f.check_box :feat_social, class: 'hidden'
+					= f.label :feat_social do
+						.option
+							.option-display
+								= image_tag 'calculator/features_social@2x'
+							%p.option-text
+								Social Integration
+				.col-sm-4.option-col
+					= f.check_box :feat_gamify, class: 'hidden'
+					= f.label :feat_gamify do
+						.option
+							.option-display
+								= image_tag 'calculator/features_gamification@2x'
+							%p.option-text
+								Gamification
+				.col-sm-4.option-col
+					= f.check_box :feat_photos, class: 'hidden'
+					= f.label :feat_photos do
+						.option
+							.option-display
+								= image_tag 'calculator/features_photos@2x'
+							%p.option-text
+								Photos/Videos
+				.col-sm-4.option-col
+					= f.check_box :feat_payment, class: 'hidden'
+					= f.label :feat_payment do
+						.option
+							.option-display
+								= image_tag 'calculator/features_shopping@2x'
+							%p.option-text
+								Purhcase & Payment
+				.col-sm-4.option-col
+					= f.check_box :feat_messaging, class: 'hidden'
+					= f.label :feat_messaging do
+						.option
+							.option-display
+								= image_tag 'calculator/features_messaging@2x'
+							%p.option-text
+								In-App Messaging
+				.col-sm-4.option-col
+					= f.check_box :feat_video, class: 'hidden'
+					= f.label :feat_video do
+						.option
+							.option-display
+								= image_tag 'calculator/features_video@2x'
+							%p.option-text
+								Video Chat
+				.col-sm-4.option-col
+					= f.check_box :feat_gps, class: 'hidden'
+					= f.label :feat_gps do
+						.option
+							.option-display
+								= image_tag 'calculator/features_gps@2x'
+							%p.option-text
+								GPS & Maps
+				.col-sm-4.option-col
+					= f.check_box :feat_places, class: 'hidden'
+					= f.label :feat_places do
+						.option
+							.option-display
+								= image_tag 'calculator/features_geo@2x'
+							%p.option-text
+								Google Places
+				.col-sm-4.option-col
+					= f.check_box :feat_schedule, class: 'hidden'
+					= f.label :feat_schedule do
+						.option
+							.option-display
+								= image_tag 'calculator/features_events@2x'
+							%p.option-text
+								Event Scheduling
+				.col-sm-4.option-col
+					= f.check_box :feat_notify, class: 'hidden'
+					= f.label :feat_notify do
+						.option
+							.option-display
+								= image_tag 'calculator/features_notifications@2x'
+							%p.option-text
+								Push Notifications
+				.col-sm-4.option-col
+					= f.check_box :feat_health, class: 'hidden'
+					= f.label :feat_health do
+						.option
+							.option-display
+								= image_tag 'calculator/features_biometric@2x'
+							%p.option-text
+								Health & Fitness Data
+			.calculator-nav
+				= f.submit 'Continue', class: 'btn btn-primary'

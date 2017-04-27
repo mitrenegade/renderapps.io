@@ -10,10 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161014012146) do
+ActiveRecord::Schema.define(version: 20170421173651) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "estimates", force: :cascade do |t|
+    t.string   "email"
+    t.string   "phone"
+    t.boolean  "reg_email"
+    t.boolean  "reg_social"
+    t.boolean  "reg_none"
+    t.boolean  "app_web"
+    t.boolean  "app_mobile"
+    t.boolean  "app_vr"
+    t.boolean  "feat_onboarding"
+    t.boolean  "feat_admin"
+    t.boolean  "feat_autoemail"
+    t.boolean  "feat_rating"
+    t.boolean  "feat_social"
+    t.boolean  "feat_gamify"
+    t.boolean  "feat_photos"
+    t.boolean  "feat_payment"
+    t.boolean  "feat_messaging"
+    t.boolean  "feat_video"
+    t.boolean  "feat_gps"
+    t.boolean  "feat_places"
+    t.boolean  "feat_schedule"
+    t.boolean  "feat_notify"
+    t.boolean  "feat_health"
+    t.boolean  "api"
+    t.boolean  "api_unsure"
+    t.boolean  "extra_website"
+    t.boolean  "extra_appicon"
+    t.boolean  "extra_logo"
+    t.integer  "timeline"
+    t.string   "public_token"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "leads", force: :cascade do |t|
     t.string   "name"
