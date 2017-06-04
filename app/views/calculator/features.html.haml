@@ -124,5 +124,77 @@
 								= image_tag 'calculator/features_biometric@2x.png'
 							%p.option-text
 								Health & Fitness Data
+				.col-sm-4.option-col
+					= f.check_box :feat_dashboard, class: 'hidden'
+					= f.label :feat_dashboard do
+						.option
+							.option-display
+								= image_tag 'calculator/features_dashboard@2x.png'
+							%p.option-text
+								User Dashboard
+				.col-sm-4.option-col
+					= f.check_box :feat_activityfeed, class: 'hidden'
+					= f.label :feat_activityfeed do
+						.option
+							.option-display
+								= image_tag 'calculator/features_activityfeed@2x.png'
+							%p.option-text
+								Activity Feed
+				.col-sm-4.option-col
+					= f.check_box :feat_tasklist, class: 'hidden'
+					= f.label :feat_tasklist do
+						.option
+							.option-display
+								= image_tag 'calculator/features_tasklist@2x.png'
+							%p.option-text
+								Task List
+				.col-sm-4.option-col
+					= f.check_box :feat_search, class: 'hidden'
+					= f.label :feat_search do
+						.option
+							.option-display
+								= image_tag 'calculator/features_search@2x.png'
+							%p.option-text
+								Search
+				.col-sm-4.option-col
+					= f.check_box :feat_audio, class: 'hidden'
+					= f.label :feat_audio do
+						.option
+							.option-display
+								= image_tag 'calculator/features_audio@2x.png'
+							%p.option-text
+								Audio
+				.col-sm-4.option-col
+					= f.check_box :feat_feedback, class: 'hidden'
+					= f.label :feat_feedback do
+						.option
+							.option-display
+								= image_tag 'calculator/features_feedback@2x.png'
+							%p.option-text
+								User Feedback
+				.col-sm-4.option-col
+					= f.check_box :feat_ads, class: 'hidden'
+					= f.label :feat_ads do
+						.option
+							.option-display
+								= image_tag 'calculator/features_ads@2x.png'
+							%p.option-text
+								Ad Serve
+				.col-sm-4.option-col
+					= f.check_box :feat_ordering, class: 'hidden'
+					= f.label :feat_ordering do
+						.option
+							.option-display
+								= image_tag 'calculator/features_ordering@2x.png'
+							%p.option-text
+								Menus & Ordering
+				.col-sm-4.option-col
+					= f.check_box :feat_sms, class: 'hidden'
+					= f.label :feat_sms do
+						.option
+							.option-display
+								= image_tag 'calculator/features_sms@2x.png'
+							%p.option-text
+								SMS Integration
 			.calculator-nav
 				= f.submit 'Continue', class: 'btn btn-primary'

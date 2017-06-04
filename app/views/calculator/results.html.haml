@@ -2,4 +2,4 @@
 	.container
 		%h1 Your Estimate
 		%h2
-			%strong $39,800
+			%strong= number_to_currency(@estimate.total_price)

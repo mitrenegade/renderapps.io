@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170421173651) do
   create_table "estimates", force: :cascade do |t|
     t.string   "email"
     t.string   "phone"
+    t.boolean  "work_with_us"
     t.boolean  "reg_email"
     t.boolean  "reg_social"
     t.boolean  "reg_none"
@@ -39,6 +40,15 @@ ActiveRecord::Schema.define(version: 20170421173651) do
     t.boolean  "feat_schedule"
     t.boolean  "feat_notify"
     t.boolean  "feat_health"
+    t.boolean  "feat_dashboard"
+    t.boolean  "feat_ads"
+    t.boolean  "feat_feedback"
+    t.boolean  "feat_search"
+    t.boolean  "feat_audio"
+    t.boolean  "feat_tasklist"
+    t.boolean  "feat_activityfeed"
+    t.boolean  "feat_sms"
+    t.boolean  "feat_ordering"
     t.boolean  "api"
     t.boolean  "api_unsure"
     t.boolean  "extra_website"
@@ -46,8 +56,8 @@ ActiveRecord::Schema.define(version: 20170421173651) do
     t.boolean  "extra_logo"
     t.integer  "timeline"
     t.string   "public_token"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "leads", force: :cascade do |t|

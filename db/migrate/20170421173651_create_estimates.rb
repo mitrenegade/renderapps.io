@@ -3,6 +3,7 @@ class CreateEstimates < ActiveRecord::Migration[5.0]
     create_table :estimates do |t|
       t.string :email
       t.string :phone
+      t.boolean :work_with_us
       t.boolean :reg_email
       t.boolean :reg_social
       t.boolean :reg_none
@@ -24,6 +25,15 @@ class CreateEstimates < ActiveRecord::Migration[5.0]
       t.boolean :feat_schedule
       t.boolean :feat_notify
       t.boolean :feat_health
+      t.boolean :feat_dashboard
+      t.boolean :feat_ads
+      t.boolean :feat_feedback
+      t.boolean :feat_search
+      t.boolean :feat_audio
+      t.boolean :feat_tasklist
+      t.boolean :feat_activityfeed
+      t.boolean :feat_sms
+      t.boolean :feat_ordering
       t.boolean :api
       t.boolean :api_unsure
       t.boolean :extra_website

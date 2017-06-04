@@ -1,10 +1,14 @@
 class CalculatorController < ApplicationController
 	before_action :set_estimate, except: [:app]
 
-	layout 'static'
+	layout 'calculator'
 
 	def app
-		@estimate = Estimate.new
+		if Estimate.where(public_token: session[:estimate_token]).present?
+			@estimate = Estimate.find_by(public_token: session[:estimate_token])
+		else
+			@estimate = Estimate.new
+		end
 	end
 
 	def users
@@ -22,7 +26,11 @@ class CalculatorController < ApplicationController
 	def timeline
 	end
 
+	def email
+	end
+
 	def results
+		redirect_to calculator_email_path unless @estimate.email.present?
 	end
 
 	private

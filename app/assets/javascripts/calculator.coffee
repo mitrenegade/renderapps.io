@@ -1,4 +1,6 @@
 @calculatorLoader = () ->
-	$('.option').click(() ->
-		$(this).toggleClass('active')
-	)
+	# $('.option').click(() ->
+	# 	$(this).toggleClass('active')
+	# )
+
+	$('[data-toggle="tooltip"]').tooltip()

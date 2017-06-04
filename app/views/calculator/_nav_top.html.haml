@@ -1,0 +1,42 @@
+.container{ style: 'margin: 50px 0 0; max-width: 100%; padding: 0;' }
+	%ol.calculator-nav
+		%li.calculator-nav-item{ class: "#{current_page?(controller: 'calculator', action: 'app') ? 'progress-current' : 'progress-todo'} #{'progress-done' if @estimate.step1done}" }
+			.icon-wrap
+				= link_to '1', estimate_app_path
+			%span.progress-text Platform
+		%li.calculator-nav-item{ class: "#{current_page?(controller: 'calculator', action: 'users') ? 'progress-current' : 'progress-todo'} #{'progress-done' if @estimate.step2done}" }
+			.icon-wrap
+				= link_to '2', estimate_users_path
+			%span.progress-text Users
+		%li.calculator-nav-item{ class: "#{current_page?(controller: 'calculator', action: 'features') ? 'progress-current' : 'progress-todo'} #{'progress-done' if @estimate.step3done}" }
+			.icon-wrap
+				= link_to '3', estimate_features_path
+			%span.progress-text Features
+		%li.calculator-nav-item{ class: "#{'progress-current' if current_page?(controller: 'calculator', action: 'api')} #{'progress-done' if @estimate.step4done}" }
+			.icon-wrap
+				= link_to '4', estimate_api_path
+			%span.progress-text API
+		%li.calculator-nav-item{ class: "#{'progress-current' if current_page?(controller: 'calculator', action: 'extras')} #{'progress-done' if @estimate.step5done}" }
+			.icon-wrap
+				= link_to '5', estimate_extras_path
+			%span.progress-text Extras
+		%li.calculator-nav-item{ class: "#{'progress-current' if current_page?(controller: 'calculator', action: 'timeline')} #{'progress-done' if @estimate.step6done}" }
+			.icon-wrap
+				= link_to '6', estimate_timeline_path
+			%span.progress-text Timeline
+		%li.calculator-nav-item{ class: "#{'progress-current' if current_page?(controller: 'calculator', action: 'results')}" }
+			.icon-wrap
+				= link_to '7', estimate_results_path
+			%span.progress-text Estimate
+
+
+
+
+		- if false
+			%li.calculator-nav-item= link_to '1', estimate_app_path, class: "#{'bold' if current_page?(controller: 'calculator', action: 'app')}"
+			%li.calculator-nav-item= link_to '2', estimate_users_path, class: "#{'bold' if current_page?(controller: 'calculator', action: 'users')} #{'disabled' if !@estimate.step1done}"
+			%li.calculator-nav-item= link_to '3', estimate_features_path, class: "#{'bold' if current_page?(controller: 'calculator', action: 'features')} #{'disabled' if !@estimate.step2done}"
+			%li.calculator-nav-item= link_to '4', estimate_api_path, class: "#{'bold' if current_page?(controller: 'calculator', action: 'api')} #{'disabled' if !@estimate.step3done}"
+			%li.calculator-nav-item= link_to '5', estimate_extras_path, class: "#{'bold' if current_page?(controller: 'calculator', action: 'extras')} #{'disabled' if !@estimate.step4done}"
+			%li.calculator-nav-item= link_to '6', estimate_timeline_path, class: "#{'bold' if current_page?(controller: 'calculator', action: 'timeline')} #{'disabled' if !@estimate.step5done}"
+			%li.calculator-nav-item= link_to '7', estimate_results_path, class: "#{'bold' if current_page?(controller: 'calculator', action: 'results')} #{'disabled' if !@estimate.step6done}"

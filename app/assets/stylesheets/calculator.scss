@@ -5,7 +5,7 @@
 .calculator-container {
 	min-height: 100vh;
 	margin-top: 50px;
-	padding: 100px 0;
+	padding: 0 0 100px;
 	background-color: #FFFDF9;
 	color: #464646;
 	text-align: center;
@@ -32,6 +32,7 @@
 			height: 200px;
 			border-radius: 23px;
 			box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+			background-color: white;
 
 			img {
 				height: 100%;
@@ -50,7 +51,16 @@
 			}
 		}
 
-		.option.active {
+		input[type='checkbox']:checked + label .option {
+			.option-display {
+				border: 3px solid #d6f3f8;
+			}
+			.option-text {
+				font-weight: 600;
+			}
+		}
+
+		input[type='radio']:checked + label .option {
 			.option-display {
 				border: 3px solid #d6f3f8;
 			}
@@ -63,5 +73,142 @@
 
 	.calculator-nav {
 		margin-top: 60px;
+	}
+}
+
+
+
+// Calculator Nav
+
+.calculator-nav {
+	.calculator-nav-item {
+		a.disabled {
+			pointer-events: none;
+			cursor: default;
+			color: #aaa;
+			user-select: none;
+
+			&:hover {
+				color: #aaa;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+/** Colors **/
+$darkGreen: #4a6a28;
+$lightGreen: #87ba51;
+$greyState: #DDD;
+$darkBlue: #126886;
+$lightBlue: #1ca0c1;
+$darkRed: #ba2d0b;
+$lightRed: #d9534f;
+
+$darkCurrent: #fff; // #126886;
+$lightCurrent: #1ca0c1;
+$darkDone: #fff; // #b9d4dd;
+$lightDone: #1ca0c1; // #b2eaf6;
+$darkTodo: #ddd;
+$lightTodo: #fff;
+
+ol.calculator-nav {
+	display: table;
+	list-style-type: none;
+	margin: 0;
+	padding: 4em 0em;
+	table-layout: fixed;
+	width: 100%;    
+	
+	li.calculator-nav-item {
+		display: table-cell;
+		line-height: 2em;
+		position: relative;
+		text-align: center;
+		box-shadow: inset 0px 20px 0px $greyState;
+		color: black;
+		
+		.icon-wrap {
+			border-radius: 50%;
+			top: -0.7em;
+			background-color: #FFF;
+			border: 5px solid $greyState;
+			// position: relative;
+			// top: -20px;
+			
+			color: #fff;
+			display: block;
+			height: 2.5em;
+			margin: 0 auto -2em;
+			left: 0;
+			right: 0;        
+			position: absolute;
+			width: 2.5em;
+		}
+		
+		.icon-check-mark, .icon-down-arrow {
+			height: 25px;
+			width: 15px;
+			display: inline-block;
+			fill: currentColor;
+		}
+		
+		.progress-text {
+			 position: relative;
+			 top: 20px;
+		}
+
+		&.progress-current {
+			box-shadow: inset 0px 20px 0px $lightCurrent;
+			transition: border-color 1s ease-in-out;
+
+			.icon-wrap {
+				background-color: $darkCurrent;
+				border-color: $lightCurrent;
+
+				.icon-check-mark {
+				 display: none;
+				}
+				.icon-down-arrow {
+					display: block;
+				}
+			}
+		}
+		
+		&.progress-todo {
+				box-shadow: inset 0px 20px 0px $greyState;
+				color: black;        
+			
+			.icon-wrap {
+				background-color: #FFF;
+				border: 5px solid $greyState;
+				border-radius: 50%;
+				bottom: 0.7em;
+				color: #fff;
+				display: block;
+				height: 2.5em;
+				margin: 0 auto -2em;
+				position: relative;
+				width: 2.5em;
+
+				.icon-check-mark, .icon-down-arrow {
+						display: none;
+				}
+			}
+		}
+
+		&.progress-done {
+			box-shadow: inset 0px 20px 0px $lightDone;
+			transition: border-color 1s ease-in-out;
+			
+			.icon-down-arrow {
+				display: none;
+			}
+
+			.icon-wrap {
+				background-color: $darkDone;
+				border: 5px solid $lightDone;
+			}                
+		}
 	}
 }

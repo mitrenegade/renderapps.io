@@ -1,7 +1,8 @@
 .calculator-container
 	.container
 		%h1 What kind of app are you looking to build?
-		= form_for @estimate, url: { controller: 'estimates', action: 'create' }, html: { class: 'estimate-form' } do |f|
+		= form_for @estimate, html: { class: 'estimate-form' } do |f|
+			= f.hidden_field :current_step, value: 'app'
 			.row.options-container
 				.col-sm-4.option-col
 					= f.check_box :app_web, class: 'hidden'

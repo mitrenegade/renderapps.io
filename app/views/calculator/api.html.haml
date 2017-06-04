@@ -1,6 +1,8 @@
 .calculator-container
 	.container
-		%h1 Does your app require an API?
+		%h1 
+			Does your app require an API?
+			= image_tag 'calculator/info@2x.png', style: 'width: 30px; height: 30px; position: relative; display: inline; cursor: pointer', "data-toggle": "tooltip", "data-placement": "right", title: "An application programming interface (API) is a framework that allows other apps to interact with your app and exchange data in a secure way."
 		= form_for @estimate, url: estimate_path(@estimate), method: 'patch', html: { class: 'estimate-form' } do |f|
 			= f.hidden_field :current_step, value: 'api'
 			.row.options-container
