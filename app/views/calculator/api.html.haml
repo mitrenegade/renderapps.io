@@ -6,7 +6,7 @@
 		= form_for @estimate, url: estimate_path(@estimate), method: 'patch', html: { class: 'estimate-form' } do |f|
 			= f.hidden_field :current_step, value: 'api'
 			.row.options-container
-				.col-sm-4.option-col
+				.col-xs-4.option-col
 					= f.radio_button :api, true, class: 'hidden'
 					= f.label :api_true do
 						.option
@@ -14,7 +14,7 @@
 								= image_tag 'calculator/api_yes@2x.png'
 							%p.option-text
 								Yes
-				.col-sm-4.option-col
+				.col-xs-4.option-col
 					= f.radio_button :api, false, class: 'hidden'
 					= f.label :api_false do
 						.option
@@ -22,7 +22,7 @@
 								= image_tag 'calculator/api_no2@2x.png'
 							%p.option-text
 								No
-				.col-sm-4.option-col
+				.col-xs-4.option-col
 					= f.check_box :api_unsure, class: 'hidden'
 					= f.label :api_unsure do
 						.option

@@ -2,19 +2,25 @@
 	.container
 		%h1 Your Estimate
 		%p.lead
-			Please enter your email to receive your free quote. We promise not to spam you, but we're happy to help you build your app.
-		= form_for @estimate, html: { class: 'estimate-form' } do |f|
-			= f.hidden_field :current_step, value: 'email'
-			.row
-				.col-sm-6.offset-sm-3
-					.form-group
-						= f.label :email, 'Email address', class: 'control-label f500', style: 'float: left; font-weight: 500'
-						= f.email_field :email, class: 'form-control'
-					.form-group
-						= f.label :phone, 'Phone number', class: 'control-label f500', style: 'float: left; font-weight: 500'
-						= f.text_field :phone, class: 'form-control'
-					.form-group
-						= f.check_box :work_with_us
-						= f.label :work_with_us, "Please reach out so we can explore working together"
-			.calculator-nav
-				= f.submit 'Continue', class: 'btn btn-primary'
+			Please enter your email to receive your free quote. We promise not to spam you, but we're happy to help you build your app. We'll be in touch with a breakdown of the costs for your features, and can discuss best ways to move forward.
+		- if @estimate.email.blank?
+			= form_for @estimate, html: { class: 'estimate-form' } do |f|
+				= f.hidden_field :current_step, value: 'email'
+				.row
+					.col-sm-6.offset-sm-3
+						.form-group
+							= f.label :email, 'Email address', class: 'control-label f500', style: 'float: left; font-weight: 500'
+							= f.email_field :email, class: 'form-control'
+						.form-group
+							= f.label :phone, 'Phone number', class: 'control-label f500', style: 'float: left; font-weight: 500'
+							= f.text_field :phone, class: 'form-control'
+						.form-group
+							= f.check_box :work_with_us
+							= f.label :work_with_us, "Please reach out so we can explore working together"
+				.calculator-nav
+					= f.submit 'Continue', class: 'btn btn-primary'
+		- else
+			.card
+				%h1 Your Estimate
+				%h2
+					%strong= number_to_currency(@estimate.total_price)

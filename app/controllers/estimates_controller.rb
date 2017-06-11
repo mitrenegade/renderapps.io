@@ -4,10 +4,20 @@ class EstimatesController < ApplicationController
     @estimate = Estimate.new(estimate_params)
     if @estimate.save
       session[:estimate_token] = @estimate.public_token
-    	flash[:notice] = "Step one done"
       redirect_to estimate_users_path
     else
-    	flash[:error] = "whoops"
+    	flash[:error] = "Sorry, please try again"
+      redirect_to :back
+    end
+  end
+
+  def load
+    if Estimate.find_by(public_token: params[:public_token])
+      @estimate = Estimate.find_by(public_token: params[:public_token])
+      session[:estimate_token] = @estimate.public_token
+      redirect_to estimate_app_path
+    else
+      flash[:error] = "Sorry, we don't recognize that code. Please try again, or start a new quote."
       redirect_to :back
     end
   end
@@ -35,7 +45,7 @@ class EstimatesController < ApplicationController
       elsif params[:estimate][:current_step] == 'timeline'
         redirect_to estimate_email_path
       elsif params[:estimate][:current_step] == 'email'
-        redirect_to estimate_results_path
+        redirect_to :back
       else
   			raise StandardError
   		end

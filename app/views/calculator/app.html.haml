@@ -4,7 +4,7 @@
 		= form_for @estimate, html: { class: 'estimate-form' } do |f|
 			= f.hidden_field :current_step, value: 'app'
 			.row.options-container
-				.col-sm-4.option-col
+				.col-xs-4.option-col
 					= f.check_box :app_web, class: 'hidden'
 					= f.label :app_web do
 						.option
@@ -12,7 +12,7 @@
 								= image_tag 'calculator/app_web@2x.png'
 							%p.option-text
 								Web App
-				.col-sm-4.option-col
+				.col-xs-4.option-col
 					= f.check_box :app_mobile, class: 'hidden'
 					= f.label :app_mobile do
 						.option
@@ -20,7 +20,7 @@
 								= image_tag 'calculator/app_mobile@2x.png'
 							%p.option-text
 								Mobile App
-				.col-sm-4.option-col
+				.col-xs-4.option-col
 					= f.check_box :app_vr, class: 'hidden'
 					= f.label :app_vr do
 						.option
@@ -30,3 +30,21 @@
 								Virtual Reality
 			.calculator-nav
 				= f.submit 'Continue', class: 'btn btn-primary'
+		- if @estimate.total_price === 0
+			%div{style: 'padding-top: 20px; text-align:center' }
+				%p.btn{ style: 'cursor: pointer; ', "data-toggle": "modal", "data-target": "#returnQuoteModal" }
+					Already have a quote that you want to return to?
+
+
+#returnQuoteModal.modal.fade{"aria-hidden": "true", "aria-labelledby": "returnQuoteModal", role: "dialog", tabindex: "-1"}
+	.modal-dialog{role: "document"}
+		.modal-content
+			%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button", style: 'position: relative; right: 15px; top: 15px; font-size: 18px;'}
+				%span{"aria-hidden" => "true"} ×
+			.modal-body{ style: 'padding: 0 15px 15px; margin: 25px 25px 0 0;' }
+				Just let us know the quote's identification code.
+				= form_tag load_estimates_url, controller: 'estimates', action: 'load', html: { class: 'estimate-form' } do
+					= label_tag :public_token, 'identification code'
+					= text_field_tag :public_token, nil, class: 'form-control'
+					.centered{ style: 'margin: 20px 20px 0; text-align: center'}
+						= submit_tag 'Load Quote', class: 'btn btn-primary', style: 'margin: auto'

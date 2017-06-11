@@ -13,6 +13,7 @@
 			= render 'layouts/navigation_static'
 		%div{ style: 'margin-top: 50px'}
 			= render 'layouts/messages'
-		= render 'calculator/nav_top'
+		%div.hidden-sm-down
+			= render 'calculator/nav_top'
 		= yield
 		= render 'layouts/footer'

@@ -26,11 +26,7 @@ class CalculatorController < ApplicationController
 	def timeline
 	end
 
-	def email
-	end
-
 	def results
-		redirect_to calculator_email_path unless @estimate.email.present?
 	end
 
 	private

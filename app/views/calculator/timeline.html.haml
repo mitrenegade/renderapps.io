@@ -4,28 +4,28 @@
 		= form_for @estimate, url: estimate_path(@estimate), method: 'patch', html: { class: 'estimate-form' } do |f|
 			= f.hidden_field :current_step, value: 'timeline'
 			.row.options-container
-				.col-sm-4.option-col
+				.col-xs-4.option-col
 					= f.radio_button :timeline, 1, class: 'hidden'
 					= f.label :timeline_1 do
 						.option
 							.option-display
-								= image_tag 'calculator/timing_flexible@2x.png'
+								= image_tag 'calculator/timing_flexible@2x.png', class: 'img-fluid'
 							%p.option-text
 								I'm Flexible
-				.col-sm-4.option-col
+				.col-xs-4.option-col
 					= f.radio_button :timeline, 2, class: 'hidden'
 					= f.label :timeline_2 do
 						.option
 							.option-display
-								= image_tag 'calculator/timing_soon@2x.png'
+								= image_tag 'calculator/timing_soon@2x.png', class: 'img-fluid'
 							%p.option-text
 								Within the next 2 months
-				.col-sm-4.option-col
+				.col-xs-4.option-col
 					= f.radio_button :timeline, 3, class: 'hidden'
 					= f.label :timeline_3 do
 						.option
 							.option-display
-								= image_tag 'calculator/timing_asap@2x.png'
+								= image_tag 'calculator/timing_asap@2x.png', class: 'img-fluid'
 							%p.option-text
 								ASAP
 			.calculator-nav

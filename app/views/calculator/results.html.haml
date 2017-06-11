@@ -1,5 +1,32 @@
 .calculator-container
 	.container
-		%h1 Your Estimate
-		%h2
-			%strong= number_to_currency(@estimate.total_price)
+		- if @estimate.email.blank?
+			%h1 Your Estimate
+			%p.lead
+				Please enter your email to receive your free quote. We promise not to spam you, but we're happy to help you build your app. We'll be in touch with a breakdown of the costs for your features, and can discuss best ways to move forward.
+			= form_for @estimate, html: { class: 'estimate-form' } do |f|
+				= f.hidden_field :current_step, value: 'email'
+				.row
+					.col-sm-6.offset-sm-3
+						.form-group
+							= f.label :email, 'Email address', class: 'control-label f500', style: 'float: left; font-weight: 500'
+							= f.email_field :email, class: 'form-control'
+						.form-group
+							= f.check_box :work_with_us
+							= f.label :work_with_us, "Please reach out so we can explore working together"
+				.calculator-nav
+					= f.submit 'Continue', class: 'btn btn-primary'
+		- else
+			.card{ style: 'padding: 50px' }
+				%h1{ style: 'margin: 0px 30px 30px;' }
+					Your Estimated Quote:
+				%h1.bold{ style: 'margin: 0; color: #086788' }
+					%strong= number_to_currency(@estimate.total_price)
+				- if @estimate.work_with_us
+					%p.lead{ style: 'margin: 30px 0 0 0;' }
+						We'll be in touch to discuss next steps!
+					%p{ style: 'margin: 0 30px 30px;' }
+						If you ever want to return to this quote, you'll need your identification number:
+						= succeed '.' do 
+							%span.bold= @estimate.public_token
+						You will receive this in your email.
